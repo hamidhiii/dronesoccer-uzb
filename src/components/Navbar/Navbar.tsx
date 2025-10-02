@@ -1,10 +1,13 @@
 import MenuLink from "./MenuLink";
+import logo from "@/assets/logo.png";
 
 export default function Navbar() {
   return (
-    <nav>
-        <div>logo</div>
-        <MenuLink />
+    <nav className="m-auto flex justify-between items-center px-10 py-4 relative">
+      <div className=" left-10 top-4 z-[200]">
+        <img className="w-32" src={logo} alt="logo" />
+      </div>
+      <MenuLink />
     </nav>
-  )
+  );
 }
