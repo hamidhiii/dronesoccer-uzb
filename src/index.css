@@ -148,3 +148,97 @@ body{
     animation: slideUp 0.4s ease forwards;
   }
 }
+
+/* Дополнительные стили для карусели и header */
+.carousel-fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+
+.carousel-fade-out {
+  animation: fadeOut 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* Улучшенные тени для текста */
+.text-shadow-strong {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.text-shadow-glow {
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+/* Стили для индикаторов карусели */
+.carousel-indicator {
+  transition: all 0.3s ease;
+}
+
+.carousel-indicator:hover {
+  transform: scale(1.2);
+}
+
+/* Плавные переходы для кнопок */
+.btn-hero {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-hero:hover {
+  transform: translateY(-2px);
+}
+
+/* Анимация для стрелки скролла */
+@keyframes scrollBounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0) translateX(-50%);
+  }
+  40% {
+    transform: translateY(-10px) translateX(-50%);
+  }
+  60% {
+    transform: translateY(-5px) translateX(-50%);
+  }
+}
+
+.scroll-arrow {
+  animation: scrollBounce 2s infinite;
+}
+
+/* Респонсивные стили для мобильных устройств */
+@media (max-width: 640px) {
+  .hero-title {
+    font-size: 2.5rem;
+    line-height: 1.1;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.1rem;
+    line-height: 1.4;
+  }
+}
+
+/* Градиентный оверлей для лучшей читаемости */
+.gradient-overlay {
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(0, 0, 0, 0.3) 50%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
+}
