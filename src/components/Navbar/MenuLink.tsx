@@ -34,8 +34,8 @@ export default function MenuLink() {
 
   return (
     <div className="relative">
-      {/* Десктопное меню */}
-      <ul className="flex gap-4 hide-at-360">
+      {/* Десктопное меню (от 461px и выше) */}
+      <ul className="hidden sm:flex gap-4"> 
         {menuLinks.map((link) => (
           <li key={link.href} className="relative text-[#374151] font-normal text-lg leading-6">
             <Link
@@ -48,11 +48,11 @@ export default function MenuLink() {
         ))}
       </ul>
 
-      {/* Кнопка бургер / крестик */}
+      {/* Кнопка бургер / крестик (до 460px) */}
       <button
         aria-label="Menu"
         onClick={() => (open ? handleClose() : setOpen(true))}
-        className="show-at-360 z-[60] relative p-2 rounded-md hover:bg-gray-100"
+        className="sm:hidden z-[60] relative p-2 rounded-md hover:bg-gray-100"
       >
         {open ? (
           <AiOutlineClose size={28} className="text-black transition-transform duration-300" />
