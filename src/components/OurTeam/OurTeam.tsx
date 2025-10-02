@@ -25,7 +25,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     name: "Мария Петрова",
     position: "Техник",
     photoUrl:
-      "https://images.unsplash.com/photo-1545996124-1b6a1b9d9f0a?w=800&q=80&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&q=80&auto=format&fit=crop",
     alt: "Мария Петрова — техник",
   },
   {
@@ -41,7 +41,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     name: "Ольга Кузнецова",
     position: "Оператор",
     photoUrl:
-      "https://images.unsplash.com/photo-1542206395-9feb3edaa68b?w=800&q=80&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=800&q=80&auto=format&fit=crop",
     alt: "Ольга Кузнецова — оператор",
   },
   {
