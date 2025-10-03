@@ -35,18 +35,27 @@ export default function MenuLink() {
   return (
     <div className="relative">
       {/* Десктопное меню (от 461px и выше) */}
-      <ul className="hidden sm:flex gap-4"> 
-        {menuLinks.map((link) => (
-          <li key={link.href} className="relative text-[#374151] font-normal text-lg leading-6">
-            <Link
-              to={link.href}
-              className="relative inline-block after:content-[''] after:absolute after:left-1/2 after:bottom-0 after:h-[2px] after:w-0 after:bg-red-500 after:transition-all after:duration-300 after:origin-center hover:after:w-full hover:after:left-0 hover:text-blue-600"
-            >
-              {link.label}
-            </Link>
-          </li>
-        ))}
-      </ul>
+<ul className="hidden sm:flex gap-4">
+  {menuLinks.map((link) => (
+    <li
+      key={link.href}
+      className="relative text-[#374151] font-normal text-lg leading-6"
+    >
+      <a
+        href={link.href}
+        onClick={(e) => {
+          e.preventDefault(); // отключаем резкий прыжок
+          const section = document.querySelector(link.href);
+          section?.scrollIntoView({ behavior: "smooth" });
+        }}
+        className="relative inline-block after:content-[''] after:absolute after:left-1/2 after:bottom-0 after:h-[2px] after:w-0 after:bg-red-500 after:transition-all after:duration-300 after:origin-center hover:after:w-full hover:after:left-0 hover:text-blue-600"
+      >
+        {link.label}
+      </a>
+    </li>
+  ))}
+</ul>
+
 
       {/* Кнопка бургер / крестик (до 460px) */}
       <button
@@ -69,26 +78,34 @@ export default function MenuLink() {
             open && !closing ? "opacity-100" : "opacity-0"
           }`}
         >
-          <ul className="flex flex-col gap-8 text-2xl font-semibold text-gray-800">
-            {menuLinks.map((link, i) => (
-              <li
-                key={link.href}
-                className={`opacity-0 transform translate-y-6 animate-slideIn`}
-                style={{
-                  animationDelay: `${i * 0.1 + 0.2}s`,
-                  animationFillMode: "forwards",
-                }}
-              >
-                <Link
-                  to={link.href}
-                  onClick={handleClose}
-                  className="relative after:content-[''] after:absolute after:left-1/2 after:bottom-0 after:h-[2px] after:w-0 after:bg-red-500 after:transition-all after:duration-300 after:origin-center hover:after:w-full hover:after:left-0 hover:text-blue-600"
-                >
-                  {link.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
+         <ul className="flex flex-col gap-8 text-2xl font-semibold text-gray-800">
+  {menuLinks.map((link, i) => (
+    <li
+      key={link.href}
+      className={`opacity-0 transform translate-y-6 animate-slideIn`}
+      style={{
+        animationDelay: `${i * 0.1 + 0.2}s`,
+        animationFillMode: "forwards",
+      }}
+    >
+      <a
+        href={link.href}
+        onClick={(e) => {
+          e.preventDefault(); // убираем стандартный переход
+          handleClose(); // плавное закрытие
+          setTimeout(() => {
+            const section = document.querySelector(link.href);
+            section?.scrollIntoView({ behavior: "smooth" });
+          }, 300); // ждём пока закроется модалка
+        }}
+        className="relative after:content-[''] after:absolute after:left-1/2 after:bottom-0 after:h-[2px] after:w-0 after:bg-red-500 after:transition-all after:duration-300 after:origin-center hover:after:w-full hover:after:left-0 hover:text-blue-600"
+      >
+        {link.label}
+      </a>
+    </li>
+  ))}
+</ul>
+
         </div>
       )}
 

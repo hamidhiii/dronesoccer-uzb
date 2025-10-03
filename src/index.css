@@ -176,6 +176,10 @@ body{
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Улучшенные тени для текста */
 .text-shadow-strong {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);

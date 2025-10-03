@@ -4,6 +4,7 @@ import OurTeam from "./components/OurTeam/OurTeam";
 import Navbar from "./components/Navbar/Navbar";
 import GalleryCarousel from "./components/Galery/Galery";
 import MerchSection from "./components/Merch/Merch";
+import ContactSection from "./components/Cintact/ContactSection";
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
     <OurTeam/>
     <GalleryCarousel/>
     <MerchSection/>
+    <ContactSection/>
     </>
   )
 }
