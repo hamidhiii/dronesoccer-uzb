@@ -1,6 +1,5 @@
 import { useState, useRef, useEffect } from "react";
 import { menuLinks } from "@/constants/menulinks";
-import { Link } from "react-router-dom";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 
 export default function MenuLink() {
