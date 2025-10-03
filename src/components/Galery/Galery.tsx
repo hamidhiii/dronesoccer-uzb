@@ -46,7 +46,7 @@ const GalleryCarousel: React.FC = () => {
   );
 
   return (
-    <section className="py-16 bg-white" aria-labelledby="gallery-heading">
+    <section id="gallery" className="py-16 bg-white" aria-labelledby="gallery-heading">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
         <h2 id="team-heading" className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
