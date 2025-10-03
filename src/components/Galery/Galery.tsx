@@ -86,13 +86,13 @@ const GalleryCarousel: React.FC = () => {
         <div className="flex justify-center mt-8 space-x-6">
           <button
             onClick={handlePrev}
-            className="p-3 bg-gradient-to-r from-blue-600 to-red-600 text-white rounded-full shadow hover:opacity-90 flex items-center justify-center"
+            className="p-3 hover:cursor-pointer bg-gradient-to-r from-blue-600 to-red-600 text-white rounded-full shadow hover:opacity-90 flex items-center justify-center"
           >
             <ChevronLeft className="w-6 h-6" />
           </button>
           <button
             onClick={handleNext}
-            className="p-3 bg-gradient-to-r from-blue-600 to-red-600 text-white rounded-full shadow hover:opacity-90 flex items-center justify-center"
+            className="p-3 hover:cursor-pointer bg-gradient-to-r from-blue-600 to-red-600 text-white rounded-full shadow hover:opacity-90 flex items-center justify-center"
           >
             <ChevronRight className="w-6 h-6" />
           </button>

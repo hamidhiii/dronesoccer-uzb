@@ -3,6 +3,7 @@ import Header from "./components/Header/Header";
 import OurTeam from "./components/OurTeam/OurTeam";
 import Navbar from "./components/Navbar/Navbar";
 import GalleryCarousel from "./components/Galery/Galery";
+import MerchSection from "./components/Merch/Merch";
 
 export default function App() {
   return (
@@ -12,6 +13,7 @@ export default function App() {
     <AboutUs/>
     <OurTeam/>
     <GalleryCarousel/>
+    <MerchSection/>
     </>
   )
 }
