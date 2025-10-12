@@ -1,4 +1,4 @@
-
+import img1 from '../../assets/carusel/photo_2025-10-12_04-18-10.jpg'
 export default function AboutUs() {
   return (
     <section id="about" className="py-16 px-6 bg-gray-50">
@@ -46,9 +46,9 @@ export default function AboutUs() {
           <div className="relative">
             <div className="relative overflow-hidden rounded-2xl shadow-2xl">
               <img
-                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                src={img1}
                 alt="Dronsoccer Uzbekistan Team"
-                className="w-full h-[600px] object-cover"
+                className="w-full h-[600px] object-fill"
               />
               
               {/* Градиентный оверлей */}

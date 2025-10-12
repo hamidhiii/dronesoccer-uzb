@@ -1,13 +1,21 @@
 
 import Carousel from './Carousel';
 import { FaArrowDown } from 'react-icons/fa';
+import img1 from '../../assets/carusel/photo_2025-10-12_04-18-10.jpg'
+import img2 from '../../assets/carusel/photo_2025-10-12_04-18-52.jpg'
+import img3 from '../../assets/carusel/photo_2025-10-12_04-19-48.jpg'
+import img4 from '../../assets/carusel/photo_2025-10-12_04-20-04.jpg'
+import img5 from '../../assets/carusel/photo_2025-10-12_04-20-18.jpg'
+import img6 from '../../assets/carusel/photo_2025-10-12_04-21-30.jpg'
+import img7 from '../../assets/carusel/photo_2025-10-12_04-22-02.jpg'
+import img8 from '../../assets/carusel/photo_2025-10-12_04-23-20.jpg'
+import img9 from '../../assets/carusel/photo_2025-10-12_20-45-42.jpg'
+import img10 from '../../assets/carusel/photo_2025-10-12_20-45-46.jpg'
 
 export default function Header() {
   // Массив изображений для карусели
   const carouselImages = [
-    'https://images.unsplash.com/photo-1473968512647-3e447244af8f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-    'https://images.unsplash.com/photo-1551698618-1dfe5d97d256?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-    'https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80'
+    img1,img2,img3,img4,img5,img6,img7,img8,img9,img10
   ];
 
   return (
