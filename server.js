@@ -1,14 +1,29 @@
 import express from "express";
 import cors from "cors";
 import axios from "axios";
+import path from "path";
+import { fileURLToPath } from "url";
 
 const app = express();
-app.use(cors());
-app.use(express.json());
+const PORT = process.env.PORT || 10000;
 
+// 🔐 Твой Telegram бот
 const TOKEN = "8391647110:AAGtxH722K9aG6dxgMBCOynYd5oPv41uFug";
 const CHAT_ID = "1208682308";
 
+// Разрешаем CORS и JSON
+app.use(cors());
+app.use(express.json());
+
+// 📂 Настройка путей для статических файлов
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const distPath = path.join(__dirname, "dist");
+
+// Раздаём фронтенд (Vite build)
+app.use(express.static(distPath));
+
+// 📩 API: отправка сообщения в Telegram
 app.post("/send-message", async (req, res) => {
   const { name, email, subject, message } = req.body;
 
@@ -29,9 +44,14 @@ app.post("/send-message", async (req, res) => {
 
     res.status(200).json({ success: true });
   } catch (err) {
-    console.error("Telegram send error:", err);
+    console.error("❌ Telegram send error:", err);
     res.status(500).json({ success: false, error: err.message });
   }
 });
 
-app.listen(4000, () => console.log("Server started on port 4000"));
+// ⚙️ Все остальные маршруты → React index.html
+app.get("*", (req, res) => {
+  res.sendFile(path.join(distPath, "index.html"));
+});
+
+app.listen(PORT, () => console.log(`✅ Server started on port ${PORT}`));
