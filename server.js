@@ -45,6 +45,7 @@ app.post("/send-message", async (req, res) => {
     res.status(200).json({ success: true });
   } catch (err) {
     console.error("❌ Telegram send error:", err);
+    console.error("Telegram send error:", err.response?.data || err.message);
     res.status(500).json({ success: false, error: err.message });
   }
 });
