@@ -17,7 +17,7 @@ const ContactSection: React.FC = () => {
   const [loading, setLoading] = useState(false);
 
   // ⚙️ ССЫЛКА НА ТВОЙ BACKEND (замени на реальную после деплоя Render / VPS)
-  const SERVER_URL = "https://dronesoccer-uzb.onrender.com/contact";
+  const SERVER_URL = "https://dronesoccer-uzb.onrender.com/send-message";
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
