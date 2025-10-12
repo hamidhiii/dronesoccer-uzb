@@ -1,6 +1,18 @@
 import React, { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import img1 from '../../assets/Galerry/img1.jpg'
+import img2 from '../../assets/Galerry/img2.jpg'
+import img3 from '../../assets/Galerry/img3.jpg'
+import img4 from '../../assets/Galerry/img4.jpg'
+import img5 from '../../assets/Galerry/img5.jpg'
+import img6 from '../../assets/Galerry/img6.jpg'
+import img7 from '../../assets/Galerry/img7.jpg'
+import img8 from '../../assets/Galerry/img8.jpg'
+import img9 from '../../assets/Galerry/img9.jpg'
+import img10 from '../../assets/Galerry/img10.jpg'
+import img11 from '../../assets/Galerry/img11.jpg'
+import img12 from '../../assets/Galerry/img12.jpg'
 
 export type GalleryItem = {
   id: string;
@@ -9,18 +21,18 @@ export type GalleryItem = {
 };
 
 export const GALLERY: GalleryItem[] = [
-  { id: "1", imageUrl: "https://images.unsplash.com/photo-1508614589041-895b88991e3e?w=800&q=80&auto=format&fit=crop", alt: "Дрон на стадионе" },
-  { id: "2", imageUrl: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=800&q=80&auto=format&fit=crop", alt: "Команда празднует победу" },
-  { id: "3", imageUrl: "https://images.unsplash.com/photo-1549921296-3a4b0e1b5d5e?w=800&q=80&auto=format&fit=crop", alt: "Дрон на тренировке" },
-  { id: "4", imageUrl: "https://images.unsplash.com/photo-1581092795360-1d1a0e3f9c2e?w=800&q=80&auto=format&fit=crop", alt: "Дрон атакует ворота" },
-  { id: "5", imageUrl: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&q=80&auto=format&fit=crop", alt: "Судьи анализируют матч" },
-  { id: "6", imageUrl: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=800&q=80&auto=format&fit=crop", alt: "Дрон с кубком" },
-  { id: "7", imageUrl: "https://images.unsplash.com/photo-1581090700227-4c4fefbe07c5?w=800&q=80&auto=format&fit=crop", alt: "Тренировка в зале" },
-  { id: "8", imageUrl: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&q=80&auto=format&fit=crop", alt: "Тренеры обсуждают" },
-  { id: "9", imageUrl: "https://images.unsplash.com/photo-1521412644187-c49fa049e84d?w=800&q=80&auto=format&fit=crop", alt: "Дрон на поле" },
-  { id: "10", imageUrl: "https://images.unsplash.com/photo-1532619187608-e5375cab36aa?w=800&q=80&auto=format&fit=crop", alt: "Игрок с дронами" },
-  { id: "11", imageUrl: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80&auto=format&fit=crop", alt: "Дрон вблизи" },
-  { id: "12", imageUrl: "https://images.unsplash.com/photo-1554475901-4538ddfbccc4?w=800&q=80&auto=format&fit=crop", alt: "Кубок команды" },
+  { id: "1", imageUrl:img1, alt: "Дрон на стадионе" },
+  { id: "2", imageUrl: img2, alt: "Команда празднует победу" },
+  { id: "3", imageUrl: img3, alt: "Дрон на тренировке" },
+  { id: "4", imageUrl: img4, alt: "Дрон атакует ворота" },
+  { id: "5", imageUrl: img5, alt: "Судьи анализируют матч" },
+  { id: "6", imageUrl: img6, alt: "Дрон с кубком" },
+  { id: "7", imageUrl: img7, alt: "Тренировка в зале" },
+  { id: "8", imageUrl: img8, alt: "Тренеры обсуждают" },
+  { id: "9", imageUrl: img9, alt: "Дрон на поле" },
+  { id: "10", imageUrl: img10, alt: "Игрок с дронами" },
+  { id: "11", imageUrl: img11, alt: "Дрон вблизи" },
+  { id: "12", imageUrl: img12, alt: "Кубок команды" },
 ];
 
 const GalleryCarousel: React.FC = () => {
