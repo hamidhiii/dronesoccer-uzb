@@ -8,7 +8,6 @@ import {
   Youtube,
   Facebook,
   CheckCircle,
-  X,
 } from "lucide-react";
 
 const ContactSection: React.FC = () => {
