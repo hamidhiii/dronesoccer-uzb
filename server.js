@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 10000;
 
 // 🔐 Твой Telegram бот
 const TOKEN = "8391647110:AAGtxH722K9aG6dxgMBCOynYd5oPv41uFug";
-const CHAT_ID = "1208682308";
+const CHAT_ID = 8237111598;
 
 // Разрешаем CORS и JSON
 app.use(cors());
