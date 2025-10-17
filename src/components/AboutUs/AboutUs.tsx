@@ -1,4 +1,4 @@
-import img1 from '../../assets/carusel/photo_2025-10-12_04-18-10.jpg'
+import img1 from '../../assets/carusel/IMG_7792.jpg'
 export default function AboutUs() {
   return (
     <section id="about" className="py-16 px-6 bg-gray-50">

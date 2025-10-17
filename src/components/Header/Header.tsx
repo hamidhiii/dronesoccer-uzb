@@ -2,7 +2,7 @@
 import Carousel from './Carousel';
 import { FaArrowDown } from 'react-icons/fa';
 import img1 from '../../assets/carusel/photo_2025-10-12_04-18-10.jpg'
-import img2 from '../../assets/carusel/photo_2025-10-12_04-18-52.jpg'
+import img2 from '../../assets/carusel/IMG_7799.jpg'
 import img3 from '../../assets/carusel/photo_2025-10-12_04-19-48.jpg'
 import img4 from '../../assets/carusel/photo_2025-10-12_04-20-04.jpg'
 import img5 from '../../assets/carusel/photo_2025-10-12_04-20-18.jpg'
